@@ -8,7 +8,7 @@ Authentication: Includes JWT-based endpoints for login and token refresh.
 
 RBAC: Integrated into views via permissions, ensuring that access is controlled per role and user context.
 
-#URL Patterns
+# URL Patterns
 
 >Authentication Endpoints
 
@@ -94,35 +94,68 @@ Description: Fetch, update, or delete a post by ID.
 Path: /userposts/<int:pk>/
 
 View: UserPostView
+
 Description: Lists posts by a specific user.
-Like Functionality
-Like Post:
+
+
+# Like Functionality
+
+>Like Post:
+
 Path: /likepost/<int:pk>/
+
 View: LikePostView
+
 Description: Toggles like on a post (authenticated users).
-Retrieve Users Who Liked:
+
+>Retrieve Users Who Liked:
+
 Path: /post/likes/<int:pk>/
+
 View: RetrieveUserswholikedView
+
 Description: Lists users who liked a post.
-Follow System
-Follow/Unfollow User:
+
+
+# Follow System
+
+> Follow/Unfollow User:
+
 Path: /user/follow/<int:pk>/
+
 View: FollowUserView
+
 Description: Follows or unfollows a user (authenticated users).
-Retrieve Followers:
+
+>Retrieve Followers:
+
 Path: /user/followers/<int:pk>/
+
 View: RetrieveUserWhoFollowView
+
 Description: Lists followers of a user.
-Comments Management
-Add Comment:
+
+# Comments Management
+>Add Comment:
+
 Path: /post/comment/<int:pk>/
+
 View: CommentsView
+
 Description: Adds a comment to a post (authenticated users).
-Retrieve Comments:
+
+>Retrieve Comments:
+
 Path: /comments/post/<int:pk>/
+
 View: RetrieveCommentView
+
 Description: Lists comments for a post.
-Delete Comment:
+
+>Delete Comment:
+
 Path: /delete/comment/<int:pk>/
+
 View: DeleteCommentView
+
 Description: Deletes a comment (authenticated users).
