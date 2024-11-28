@@ -10,7 +10,7 @@ RBAC: Integrated into views via permissions, ensuring that access is controlled 
 
 #URL Patterns
 
-Authentication Endpoints
+>Authentication Endpoints
 
 
 Token Obtain:
@@ -22,7 +22,7 @@ View: MyTokenPairView
 Description: Generates a JWT token upon valid user credentials.
 
 
-Token Refresh:
+>Token Refresh:
 
 Path: /token/refresh/
 
@@ -31,7 +31,7 @@ View: TokenRefreshView
 Description: Refreshes an expired JWT token.
 
 
-User Management
+>User Management
 
 User List:
 
@@ -42,7 +42,7 @@ View: UserList
 Description: Lists all users (admin-only access).
 
 
-Register User:
+>Register User:
 
 Path: /register/
 
@@ -50,25 +50,49 @@ View: UserRegistrationView
 
 Description: Allows new user registration.
 
-Retrieve User:
+
+>Retrieve User:
+
 Path: /user/retrieve/<int:pk>/
+
 View: RetrieveUserView
+
 Description: Fetch or update user details by ID (authenticated users).
-Delete User:
+
+
+>Delete User:
+
 Path: /delete/user/<int:pk>/
+
 View: DeleteUserView
+
 Description: Delete a user (admin or self-permission required).
-Post Management
+
+
+>Post Management
+
 Posts List/Create:
+
 Path: /posts/
+
 View: PostsView
+
 Description: Lists or creates posts (authenticated users).
-Retrieve Post:
+
+
+>Retrieve Post:
+
 Path: /posts/retrieve/<int:pk>/
+
 View: RetrievePostView
+
 Description: Fetch, update, or delete a post by ID.
-User's Posts:
+
+
+>User's Posts:
+
 Path: /userposts/<int:pk>/
+
 View: UserPostView
 Description: Lists posts by a specific user.
 Like Functionality
